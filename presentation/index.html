@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=1024" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <title>Promises</title>
+
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+      <link href="vendor/impress-demo.css" rel="stylesheet" />
+
+      <style>
+        h1{ text-align: center; font-size: 50pt;}
+        .slide_title{ text-align:center; padding: 50px 0; font-size: 1.5em; line-height: 1.5em;}
+        .slide img{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .img_larger{
+          width: 600px;
+        }
+
+        .initials{
+          text-align: right;
+          padding-bottom: 10px;
+        }
+        .social_logo{
+          float: right;
+          width: 32px;
+        }
+        a{
+          font-size: 1.2em;
+        }
+        .social_link{
+          font-size: 0.8em;
+          line-height: 1.2em;
+          float: right;
+          padding-right: 10px;
+        }
+        li{
+          padding: 0 0 15px 100px;
+        }
+        .clear{
+          clear: right;
+        }
+      </style>
+      </head>
+  </head>
+  <body class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+
+    <!-- Presentation content -->
+    <div id="impress">
+
+      <div class="step slide" data-x="-1000" data-y="-1500">
+          <br/><br/><br/><br/><br/><br/>
+          <h1>Promises</h1>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <p class="initials">Artūrs Mekšs</p>
+          <img class="social_logo" src="img/github.png" /><div class="social_link">AMekss</div><div class="clear"></div>
+          <img class="social_logo" src="img/twitter.png" /><div class="social_link">@arturs_mekss</div><div class="clear"></div>
+      </div>
+
+      <div class="step slide" data-x="0" data-y="-1500">
+        <p class="slide_title">Who am I?</p>
+        <ul>
+          <li>I'm working as an application developer since 2003</li>
+          <li>I'm building stuff in javascript since 2006</li>
+          <li>I'm working at Tieto as a Ruby developer</li>
+          <li>I'm still learning and discovering new things</li>
+        </ul>
+      </div>
+
+      <div class="step slide" data-x="1000" data-y="-1500">
+          <p class="slide_title">My JavaScript open source foot print</p>
+          <a href="https://github.com/AMekss/jquery.quicktip" target="_blank">jquery.quicktip.js</a> - drop in replacement for default browser tool tips. Aims to be the simplest solutions for that. Doesn't do anything fancy but show nice tool tips.<br/><br/>
+          <img src="img/tip_samples.jpg" />
+      </div>
+
+      <div class="step slide" data-x="2000" data-y="-1500">
+        <p class="slide_title">My JavaScript open source foot print</p>
+        <a href="https://gist.github.com/AMekss/2994473" target="_blank">namespace.js</a> - your best friend for dealing with javascipt global variable space.<br/><br/>
+        <img src="img/namespace_source.png" />
+      </div>
+
+      <div class="step slide" data-x="3000" data-y="-1500">
+        <br/>
+        <q class="centred">Let's make a javascript MVC application from scratch and see namespace.js in <b style="color:red">action</b> ..</q><br/>
+      </div>
+
+      <div class="step slide" data-x="4000" data-y="-1500">
+        <p class="slide_title">First we need some model and a view</p>
+        <img src="img/ns_model_view.png" />
+
+      </div>
+
+      <div class="step slide" data-x="5000" data-y="-1500">
+        <p class="slide_title">Then we can use it in our controller</p>
+        <img src="img/ns_controller.png" />
+      </div>
+
+      <div class="step slide" data-x="6000" data-y="-1500">
+        <p class="slide_title">The same but for comments in coffee</p>
+        <img src="img/ns_coffee.png" />
+      </div>
+
+      <div class="step slide" data-x="7000" data-y="-1500">
+        <p class="slide_title">Of course in production I usually use Backbone for MVC</p>
+        <img src="img/ns_backbone.png" />
+      </div>
+
+      <div class="step slide" data-x="8000" data-y="-1500">
+        <p class="slide_title">But let's get back to our <b style="color:red">post</b> MVC</p>
+        <img class="img_larger" src="img/pain_part.png" />
+      </div>
+
+      <div class="step slide" data-x="9000" data-y="-1500">
+        <br/><br/><br/>
+        <q class="centred"><b style="color:green">Promises</b> to rescue</q>
+      </div>
+
+      <div class="step slide" data-x="10000" data-y="-1500">
+        <p class="slide_title">What is Promises?</p>
+        <ul>
+          <li>In common usage, the terms <i>Promise</i>, <i>Deferred</i>, and <i>Future</i> are roughly synonymous.</li>
+          <li>A Deferred/Promise object can be viewed as a three states state machine:</li>
+        </ul>
+        <img src="img/deferred.png" />
+      </div>
+
+      <div class="step" data-x="10000" data-y="1500" data-rotate-x="90" data-scale="4">
+        <img src="img/bonoparts_quote.png" style="height: 210px"/>
+      </div>
+
+      <div class="step slide" data-x="11000" data-y="-1500">
+        <p class="slide_title">Brief history of <b>Promises</b></p>
+        <ul>
+          <li>- The term was first used by <b style="color: green">C++</b> engineers on the <b>Xanadu</b> project</li>
+          <li>- Promises were later used in the <b style="color: green">E programming language</b></li>
+          <li>- E programming language inspired <b style="color: green">Python</b> developers to implement them in the form of the Twisted framework’s <b>Deferreds</b></li>
+        </ul>
+      </div>
+
+      <div class="step slide" data-x="12000" data-y="-1500">
+        <p class="slide_title">Brief history of <b>Promises</b> in <b>JavaScript</b></p>
+        <ul>
+          <li>- Promises hit the <b>JavaScript</b> mainstream in <b style="color: green">2007</b> when the <b>Dojo</b> framework, taking a cue from Twisted, added an object called <i>dojo.Deferred</i></li>
+          <li>- In <b style="color: green">2009</b>, citing <i>dojo.Deferred</i> as an influence, <b>Kris Zyp</b> proposed the <b>CommonJS Promises/A</b> spec.</li>
+          <li>- In January <b style="color: green">2011</b> within version 1.5 it was introduced in <b>jQuery</b> by <i>$.Deferred</i> object</li>
+          <li>- Other popular choices beside jQuery is <b>Q.js</b> and <b>FuturesJS</b> </li>
+        </ul>
+      </div>
+
+      <div class="step slide" data-x="13000" data-y="-1500">
+        <p class="slide_title">Making promises with jQuery</p>
+        <ul>
+          <li>- jQuery 1.5+ (<i>$.ajax</i>, <i>$.get</i>, and <i>$.post</i>) return Promises</li>
+          <li>- Up until jQuery 1.8 there were changes and new feature in the API so it's better to use jQuery 1.8+ for making promises</li>
+          <li>- You can make your own promises via <i>$.Deferred</i> object</li>
+        </ul>
+        <img src="img/making_promise.png" />
+      </div>
+
+      <div class="step slide" data-x="14000" data-y="-1500">
+        <p class="slide_title">Why <i>$.Deferred</i> object?</p>
+        Well <b>Deferred</b> object is <b>Promise</b>, or private representation of it. You can <i>resolve</i> or <i>reject</i> promise via it. <br/>
+        While promise is public object and can only accept callbacks or return its state (<i>pending/resolved/rejected</i>).
+        <br/><br/>
+        <img src="img/deferred_promise.png" />
+      </div>
+
+      <div class="step slide" data-x="15000" data-y="-1500">
+        <p class="slide_title">Progress notifications</p>
+        There are <i>private</i> notify method and public <i>progress</i> special type of callback witch can be triggered any number of times.
+      </div>
+
+      <div class="step slide" data-x="16000" data-y="-1500">
+        <p class="slide_title"><b>$.Deferred</b> vs <b>CommonJS Promises/A</b></p>
+        <b>Notable differences:</b> jQuery uses the term resolve as the opposite of fail, whereas Promises/A uses fulfill. Under Promises/A, a Promise is said to be “resolved” when it’s either fulfilled or failed.<br/>
+        <br/>
+        <b>Q.js</b> is straight forward CommonJS Promises/A implementation and provide convenient way to convert promises<br/>
+        <img src="img/convert_promise.png" />
+      </div>
+
+      <div class="step slide" data-x="17000" data-y="-1500">
+        <br/><br/><br/>
+        <q class="centred">Let's try promises in <b style="color:red">action</b> ..</q><br/>
+      </div>
+
+      <div class="step slide" data-x="18000" data-y="-1500">
+        <p class="slide_title">#1 Example Dialog</p>
+        <iframe src="http://127.0.0.1:3001/dialog.html" width="800" height="490"></iframe>
+      </div>
+
+      <div class="step slide" data-x="19000" data-y="-1500">
+        <p class="slide_title">#2 Example Flow control</p>
+        <iframe src="http://127.0.0.1:3001/flow_control.html" width="800" height="490"></iframe>
+      </div>
+
+      <div class="step slide" data-x="20000" data-y="-1500">
+        <p class="slide_title">Refactoring our post MVC</p>
+        <img src="img/refactoring.png" height="500" />
+      </div>
+
+
+      <div class="step slide" data-x="21000" data-y="-1500" data-rotate-y="90">
+        <p class="slide_title">Conclusion</p><br/>
+        <ul>
+          <li>- Promises are an abstraction that let us represent simple tasks with objects that can be combined to represent complex tasks.</li>
+          <li>- While with promises there is possible to build simple flow controls, but generally it's better to use flow control libs for that e.g. <i>async.js</i>
+        </ul>
+      </div>
+
+
+      <div class="step slide" data-x="22000" data-y="-1500" data-rotate-y="90">
+        <p class="slide_title">Books to read</p><br/>
+        <img src="img/book_async.png" height="400" style="border: 1px solid black; float:left" />
+        <img src="img/book_coffee.png" height="400" style="border: 1px solid black;" />
+      </div>
+
+
+      <div class="step slide" data-x="23000" data-y="-1500" data-rotate-y="90">
+        <q class="centred">
+          <br/><br/>
+          Happy hacking<b style="color: red">!</b> :)
+        </q>
+        <br/><br/><br/><br/>
+        <span style="position: relative; float: right;">Paldies<b style="color: red">!</b> Thank you<b style="color: red">!</b></span>
+      </div>
+
+    <!-- include impress.js -->
+    <script src="vendor/impress.js"></script>
+    <script>impress().init();</script>
+
+  </body>
+</html>
